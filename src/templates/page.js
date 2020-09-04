@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, navigate } from "gatsby"
 
 export const query = graphql`
   query PageTemplateQuery($id: String!) {
@@ -21,6 +21,7 @@ const PageTemplate = props => {
       <h1>{page.title}</h1>
       <h3>{page.subtitle}</h3>
       <p>{page.content}</p>
+      <button onClick={() => navigate("/")}>Home</button>
     </div>
   )
 }

@@ -42,7 +42,7 @@ export default function Index(props) {
         >
           Submit
         </button>
-        <button onClick={() => navigate("/")} className="button">
+        <button onClick={() => setText("")} className="button">
           Home
         </button>
       </div>
