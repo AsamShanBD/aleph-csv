@@ -1,10 +1,17 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: `aleph-csv`,
+    description: `Aleph CSV`,
+  },
+  pathPrefix: "/aleph-csv",
+  plugins: [
+    `gatsby-transformer-csv`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/data`,
+        name: `data`,
+      },
+    },
+  ],
 }
